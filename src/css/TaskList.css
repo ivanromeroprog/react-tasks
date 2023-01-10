@@ -1,0 +1,17 @@
+.App-tasks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .App-tasks-list{
+    background-color: #ccc;
+    min-height: 500px;
+    width: 100%;
+    max-width: 900px;
+    margin: 10px;
+    border-radius: 15px;
+    padding: 15px;
+  }
+  

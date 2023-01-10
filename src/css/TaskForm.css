@@ -1,0 +1,32 @@
+.form-task{
+    display: block;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.form-task-input{
+    min-width: 150px;
+    max-width: 500px;
+    width: 50vw;
+    font-size: 1em;
+    background-color: white;
+    border-radius: 4px 0 0 4px;
+    border: 1px solid white;
+    padding: 16px;
+}
+
+.form-task-button{
+    padding: 16px;
+    font-size: 1em;
+    background-color: aqua;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 0 4px 4px 0;
+    transition: all 0.5s;
+}
+
+.form-task-button:hover{
+    background-color: aquamarine;
+}
