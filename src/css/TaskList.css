@@ -7,7 +7,6 @@
   
   .App-tasks-list{
     background-color: #ccc;
-    min-height: 500px;
     width: 100%;
     max-width: 900px;
     margin: 10px;
@@ -15,3 +14,25 @@
     padding: 15px;
   }
   
+  .App-task-list-conatiner{
+    height: calc(100vh - 220px);
+    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-color: rgb(21, 49, 100) transparent;
+    scrollbar-width: thin;
+  }
+
+  .App-task-list-conatiner::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+    background: transparent;
+}
+
+.App-task-list-conatiner::-webkit-scrollbar-thumb {
+    background: rgb(21, 49, 100);
+    -webkit-border-radius: 1ex;
+}
+
+.App-task-list-conatiner::-webkit-scrollbar-corner {
+    background: #000;
+}

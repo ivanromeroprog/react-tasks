@@ -26,9 +26,9 @@
 }
 
 .completed {
-    background-color: #21a548;
+    background-color: #aaa !important;
     text-decoration: line-through;
-    color: white
+    color: #ddd5;
 }
 
 .task-container:nth-child(3n+1) {

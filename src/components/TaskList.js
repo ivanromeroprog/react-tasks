@@ -17,11 +17,26 @@ function TaskList() {
     }
 
     const deleteTask = (id) => {
-        console.info('delete '+id);
+        
+        const updatedTasks = tasks.filter((task) => {
+            return task.id !== id;
+        });
+
+        setTasks(updatedTasks);
     }
 
     const completeTask = (id) => {
         console.info('complete' + id);
+
+        const updatedTasks = tasks.map((task) => {
+            if(task.id === id){
+                task.completed = !task.completed;
+            }
+
+            return task;
+        })
+
+        setTasks(updatedTasks);
     }
 
     return (
