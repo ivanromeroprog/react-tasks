@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Task from './Task';
 import TaskForm from './TaskForm';
 import '../css/TaskList.css';
@@ -7,12 +7,27 @@ function TaskList() {
 
     const [tasks, setTasks] = useState([]);
 
+
+    useEffect(() => {
+        try
+        {
+            const updatedTasks = JSON.parse(localStorage.getItem('tasks'));
+            if(updatedTasks)
+            {
+                setTasks(updatedTasks);
+            }
+        }
+        catch(e){
+        }
+    },[]);
+
     const addTask = (task) => {
         
         if(task.text.trim()){
             task.text = task.text.trim();
-            setTasks([task, ...tasks]);
-            console.log(tasks);
+            const updatedTasks = [task, ...tasks];
+            setTasks(updatedTasks);
+            localStorage.setItem('tasks', JSON.stringify(updatedTasks));
         }
     }
 
@@ -23,6 +38,7 @@ function TaskList() {
         });
 
         setTasks(updatedTasks);
+        localStorage.setItem('tasks', JSON.stringify(updatedTasks));
     }
 
     const completeTask = (id) => {
